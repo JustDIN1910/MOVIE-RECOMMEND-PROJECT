@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation</title>
+    <style>
+        body {
+            background-color: black;
+            color: red;
+            text-align: center;
+        }
+        form {
+            margin: 20px;
+        }
+        input, select {
+            padding: 10px;
+            margin: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Movie Recommendation System</h1>
+    <form action="/recommend" method="POST">
+        <label for="genre">Select Genre:</label>
+        <select name="genre" id="genre" required>
+            <option value="Action">Action</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Drama">Drama</option>
+            <option value="Romance">Romance</option>
+            <option value="Horror">Horror</option>
+        </select><br><br>
+
+        <label for="year_range">Select Year Range:</label>
+        <input type="text" name="year_range" id="year_range" placeholder="e.g., 2000-2020" required><br><br>
+
+        <button type="submit">Get Recommendations</button>
+    </form>
+</body>
+</html>
